@@ -44,6 +44,7 @@ hr{
 }
 .menu-inner ul{
     display: flex;
+    align-items: center;
     gap: 36px;
 }
 .menu-inner ul li{
@@ -53,7 +54,14 @@ hr{
     text-decoration: none;
     color: #FFFFFF;
 }
+.menu-inner ul li a img{
+    width: 51px;
+    height: 51px;
+}
 /* top player section style */
+.top-player-setion{
+    margin-top: 30px;
+}
 .top-player{
     margin-bottom: 30px;
 }
@@ -190,4 +198,40 @@ hr{
 }
 .time{
     color: #FF4A60;
+}
+/* ---------------
+    media query
+--------------- */
+/* ----------------------
+    mobile responsive
+---------------------- */
+@media only screen and (max-width:688px) {
+    .container{
+        width: 100%;
+    }
+    .header-container, .player{
+        flex-direction: column;
+    }
+    .players, .blogs, .courses{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .blog{
+        align-items: center;
+    }
+}
+/* -------------------
+    tabe responsive
+------------------- */
+@media only screen and (min-width:689px) and (max-width:992px) {
+    .container{
+        width: 100%;
+    }
+    .players, .courses{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+    }
+    .course{
+        margin-top: 30px;
+    }
 }
